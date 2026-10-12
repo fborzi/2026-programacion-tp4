@@ -11,3 +11,11 @@ def suma_digitos(numero:int):
         suma_total= suma_total+ digito
         numero = numero//10
     return print(f"La suma de los digitos es: {suma_total}")
+
+def mostrar_suma_digitos(numero: int):
+    suma_total = 0
+    while numero > 0:
+        digito = numero % 10
+        suma_total = suma_total + digito
+        numero = numero // 10
+    print(f"La suma de los digitos es: {suma_total}")
