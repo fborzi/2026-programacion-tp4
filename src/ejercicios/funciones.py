@@ -18,3 +18,10 @@ def mostrar_suma_digitos(numero:int):
 ### la diferencia entre la funcion suma_digitos y la funcion mostrar suma digitos, es que la primera retorna un 
 ### valor, que puedo usar despues porque queda guardado. En cambio, la segunda al no tener un return solo muestra un mensaje con el print
 
+def maximo(num1: int, num2: int):
+    max : int
+    if num1 > num2:
+        max = num1
+    else:
+        max= num2
+    return max

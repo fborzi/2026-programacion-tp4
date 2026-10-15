@@ -1,6 +1,6 @@
 from funciones import suma_digitos, es_par
 
-impares =0
+impares = 0
 
 numeroIngresado = (int(input("Ingrese un numero entero: ")))
 
