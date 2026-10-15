@@ -25,3 +25,15 @@ def maximo(num1: int, num2: int):
     else:
         max= num2
     return max
+
+def usuario(nombre):
+    nombre_minuscula = nombre.lower().replace(",", "")
+    nombre_ingresado = nombre_minuscula.split()
+    nombre_al_reves = nombre_ingresado[::-1]
+    usuario = "".join(nombre_al_reves)
+    return (f"Nombre de usuario generado: {usuario}")
+
+def contrasenia_por_defecto(dni:int):
+    ultimos= str(dni)[-4:]
+    contrasenia= int(ultimos)
+    return (f"Contraseña generada: {contrasenia}")
