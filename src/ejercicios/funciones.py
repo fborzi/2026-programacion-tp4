@@ -31,9 +31,9 @@ def usuario(nombre):
     nombre_ingresado = nombre_minuscula.split()
     nombre_al_reves = nombre_ingresado[::-1]
     usuario = "".join(nombre_al_reves)
-    return (f"Nombre de usuario generado: {usuario}")
+    return usuario
 
 def contrasenia_por_defecto(dni:int):
     ultimos= str(dni)[-4:]
     contrasenia= int(ultimos)
-    return (f"Contraseña generada: {contrasenia}")
+    return contrasenia
