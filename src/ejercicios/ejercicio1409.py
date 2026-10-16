@@ -1,4 +1,4 @@
-from funciones import usuario, contrasenia_por_defecto
+from funciones import usuario, contrasenia_por_defecto, titulo
 
 nombre= input("Ingrese un nombre")
 dni= input(("Ingrese un numero: "))

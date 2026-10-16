@@ -37,3 +37,13 @@ def contrasenia_por_defecto(dni:int):
     ultimos= str(dni)[-4:]
     contrasenia= int(ultimos)
     return contrasenia
+
+def titulo(cadena):
+    palabras_separadas= cadena.split()
+    primer_mayusc = [letra.capitalize() for letra in palabras_separadas]
+    titulo= " ".join(primer_mayusc)
+    if titulo.replace(" ","").isalpha():
+        return titulo
+    else:
+        return "el nombre ingresado tiene un error"
+# el metodo isalpha() sirve para corroborar si alguna palabra contiene un numero.
