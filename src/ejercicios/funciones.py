@@ -47,3 +47,5 @@ def titulo(cadena):
     else:
         return "el nombre ingresado tiene un error"
 # el metodo isalpha() sirve para corroborar si alguna palabra contiene un numero.
+ def nuevaFuncion():
+    return None 
