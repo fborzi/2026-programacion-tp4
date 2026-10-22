@@ -27,4 +27,36 @@ def mostrar_suma_digitos(numero: int):
         digito = numero % 10
         suma += digito
         numero = numero // 10
-    print("La suma de los digitos es:", suma)
+    
+
+
+def maximo(num_1, nume_2):
+    """(Calcula y retorna el maximo entre dos numeros positivos)"""
+    if num_1 > nume_2:
+        return num_1
+    else:
+        return nume_2
+
+
+def usuario(nombre):
+    """(Recibe como parametro el nombre de un usuario y retorna el nombre)"""
+    nombre = nombre.lower()
+    partes = nombre.replace(",", "").split()
+
+    return partes[1] + partes[0]
+
+def contrasenia_por_defecto(dni):
+    """(Recibe un dni y retorna una cadena con los ultimos 4 numeros)"""
+    dni = str(dni)
+    return dni[-4:]
+
+
+def titulo(cadena):
+    palabras = cadena.lower().split()
+    resultado = ""
+
+    for palabra in palabras:
+        resultado = resultado + palabra[0].upper() + palabra[1:] + " "
+
+    return resultado.strip()
+
