@@ -42,3 +42,21 @@ def maximo(numero1:int,numero2:int):
     return numero1
  else:
    return numero2
+
+
+def usuario(nombre:str):
+ """Retorna el usuario del usuario
+ Args:nombre-str:nombre ingresado por teclado"""
+ nombre_completo = nombre.split(" ")
+ nombre = nombre_completo[1]+nombre_completo[0]
+ nombre = nombre.replace(",","")
+ nombre = nombre.replace(" ","")
+ return nombre.lower().lstrip()
+
+def contrasenia_por_defecto(dni:int):
+ """Retorna la contraseña por defecto del usuario
+ Args:dni-int:dni ingresado por teclado"""
+ dni_str = str(dni)
+ if len(dni_str) < 8:
+    dni_str = dni_str.zfill(8)
+ return dni_str[-4:]
