@@ -45,18 +45,56 @@ def maximo(numero1:int,numero2:int):
 
 
 def usuario(nombre:str):
- """Retorna el usuario del usuario
- Args:nombre-str:nombre ingresado por teclado"""
- nombre_completo = nombre.split(" ")
- nombre = nombre_completo[1]+nombre_completo[0]
- nombre = nombre.replace(",","")
- nombre = nombre.replace(" ","")
- return nombre.lower().lstrip()
+   """
+      Retorna el usuario del usuario
+   
+      Args:nombre-str:nombre ingresado por teclado
+
+
+      returns:str:el usuario del usuario
+   """
+   nombre_completo = nombre.split(",")
+   nombre = (nombre_completo[1]+nombre_completo[0])
+   nombre = nombre.replace(",","")
+   nombre = nombre.replace(" ","")
+   return nombre.lower().lstrip()
 
 def contrasenia_por_defecto(dni:int):
- """Retorna la contraseña por defecto del usuario
- Args:dni-int:dni ingresado por teclado"""
- dni_str = str(dni)
- if len(dni_str) < 8:
-    dni_str = dni_str.zfill(8)
- return dni_str[-4:]
+   """
+      Retorna la contraseña por defecto del usuario
+      Args:dni-int:dni ingresado por teclado
+      returns:str:la contraseña por defecto del usuario
+   """
+   dni_str = str(dni)
+   if len(dni_str) < 8:
+      dni_str = dni_str.zfill(8)
+   return dni_str[-4:]
+
+def titulo(cadena:str):
+   """
+   Retorna la cadena con la primera letra de cada palabra en mayuscula
+   Args:cadena-str:cadena ingresada por teclado
+   returns:str:la cadena con la primera letra de cada palabra en mayuscula
+
+   Se utiliza isalpha() para comprobar si el primer carácter
+   de cada palabra es una letra antes de convertirlo a mayúscula.
+   """
+
+   resultado = ""
+   anterior_es_letra = False
+
+   for caracter in cadena:
+         if caracter.isalpha():
+               if anterior_es_letra:
+                  resultado += caracter.lower()
+               else:
+                  resultado += caracter.upper()
+               anterior_es_letra = True
+         else:
+               resultado += caracter
+               anterior_es_letra = False
+
+   return resultado
+
+
+  
