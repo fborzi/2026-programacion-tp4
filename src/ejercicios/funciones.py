@@ -68,28 +68,54 @@ def maximo(num_1: int, num_2: int):
         return num_2
 
 def usuario(nombre):
+ """
+ esta funcion define usuario y pide un nombre y apellido
+    args:
+    usuario: String
+    returns: nombre y apellido sin comas, espacios y en minuscula
+ """
  nombre_completo = input("ingrese nombre completo: ")
-"""
-"""
-apellido, nombres = nombres.split(", ")
-        usuario = nombres + apellido
-        usuario = usuario.replace(" ", "")
-        usuario = usuario.lower()
-        return usuario
+ apellido, nombres = nombres.split(", ")
+ usuario = nombres + apellido
+ usuario = usuario.replace(" ", "")
+ usuario = usuario.lower()
+ return usuario
 
 
 def contrasenia_por_defecto(dni):
+    """
+    esta funcion define contrasenia por defecto al dni que se ingrese
+    args:
+    Integer
+    returns: los ultimos 4 digitos ded dni
+    """
     return str(dni)[-4:]
 
 
 def titulo(cadena):
-"""
+    """
+    esta funcion define a titulo como una cadena de Strings que luego 
+    como tittle pasara a tener todas las primeras letras de cada palabra en mayuscula
+    args:
+    titulo: String
+    returns: las palabras con la primera letra en mayuscula con el metodo isalpha() q comprueba si un 
+    caracter es una letra, si el usuario escribe un numero dentro de una palabra devuelve false
+    """
 
-"""
-resultado = ""
-palabra_nueva = True
-for caracter in cadena:
-    if caracter == " ":
-    resultado =  resultado + caracter 
-    palabra_nueva = True 
-    elif palabra_nuevaa and caracter 
+    resultado = ""
+    nueva_palabra = True
+
+    for caracter in cadena:
+        if caracter == " ":
+            resultado = resultado + caracter
+            nueva_palabra = True
+        elif nueva_palabra and caracter.isalpha():
+            resultado = resultado + caracter.upper()
+            nueva_palabra = False
+        else:
+            resultado = resultado + caracter.lower()
+            if caracter.isalpha():
+                nueva_palabra = False
+
+    return resultado
+    
