@@ -8,33 +8,23 @@ def es_par(numero: int ):
 
 #ejercicio 4 suma de 4 digitos 
 
-def suma_digitos(numero: int) :
+def suma_digitos(numero):
     suma = 0
-    while numero > 0:
-         digito = numero % 10
-         suma = suma + digito
-         numero = numero // 10
+
+    for digito in str(abs(numero)):
+        suma = suma + int(digito)
+
     return suma
- 
-print (suma_digitos(438))
 
 
 #ejercicio 5 mostar suma de digitos 
 
-def mostrar_suma_digitos(numero: int):
-    suma = 0
+def mostrar_suma_digitos(numero):
+    suma = suma_digitos(numero)
+    print("La suma de los dígitos es:", suma)
 
-    while numero > 0:
-        digito = numero % 10
-        suma = suma + digito
-        numero = numero // 10
-
-    print("la suma de los digitos es:", suma)
-   
-resultado = mostrar_suma_digitos(438)
-print(resultado) 
-""" resultado es None porque la funcion no tiene un return, solo imprime el resultado.
-    en el anterio si tiene retun por eso impreme el resultado de la suma de los digitos. """
+"""  la funcion 1404 retorna la suma de los digitos y la funcion 
+1405 muestra la suma, pero retorna None porque no tiene return. """
 
 #ejercicio 7 maximo entre dos numeros
 def maximo(num_1: int, num_2: int):

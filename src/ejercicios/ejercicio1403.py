@@ -1,13 +1,19 @@
 """lectura hasta 8 pares este codigo  """
-from funciones import es_par
+def leer_pares(cantidad, todos_positivos):
+    numero = int(input("ingresa un numero: "))
 
-contador_pares = 0 
-todos_positivos = True 
-while contador_pares < 8:
-    numero = int (input ("ingrese un numero: "))
-    if es_par(numero):
-        contador_pares += 1 
-    if numero < 0:
-        todos_positivos = False
+    if numero % 2 == 0:
+        if numero <= 0:
+            todos_positivos = False
 
-print(todos_positivos)
+        cantidad = cantidad + 1
+
+    if cantidad < 8:
+        return leer_pares(cantidad, todos_positivos)
+
+    return todos_positivos
+
+
+resultado = leer_pares(0, True)
+print("todos los pares ingresados fueron positivos:")
+print(resultado)

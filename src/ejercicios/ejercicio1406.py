@@ -1,14 +1,31 @@
 #ejercico 1406 corte por suma de digitos#
 
-from funciones import es_par, suma_digitos
+def es_par(numero):
+    return numero % 2 == 0
 
-cantidad_impares = 0
-numero = int(input("Ingresa un numero: "))
 
-while suma_digitos(numero) >= 10 and suma_digitos(numero) <= 50:
-    if not es_par(numero):
-        cantidad_impares += 1
+def suma_digitos(numero):
+    suma = 0
 
+    for digito in str(abs(numero)):
+        suma = suma + int(digito)
+
+    return suma
+
+
+def leer_numeros(cantidad_impares):
     numero = int(input("ingresa un numero: "))
+    suma = suma_digitos(numero)
 
-print("cantidad de numeros impares leidos:", cantidad_impares)
+    if suma < 10 or suma > 50:
+        return cantidad_impares
+
+    if not es_par(numero):
+        cantidad_impares = cantidad_impares + 1
+
+    return leer_numeros(cantidad_impares)
+
+
+cantidad = leer_numeros(0)
+
+print("cantidad de numeros impares:", cantidad)

@@ -1,13 +1,17 @@
-from funciones import maximo
+#ejercio 1407 maximo entre ddos numeros 
 
-numero = int(input("ingresa un numero: "))
-mayor = numero
+def maximo(num_1, num_2):
+    if num_1 > num_2:
+        return num_1
+    else:
+        return num_2
 
-contador = 1
 
-while contador < 5:
-    numero = int(input("Ingresa un numero: "))
+
+mayor = int(input("ingresa un numero positivo: "))
+
+for i in range(4):
+    numero = int(input("ingresaotro numero positivo: "))
     mayor = maximo(mayor, numero)
-    contador += 1
 
 print("el maximo numero leido es:", mayor)
